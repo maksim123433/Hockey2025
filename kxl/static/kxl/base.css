@@ -1,0 +1,55 @@
+ /* чтобы растянуть и минус отступы (paddings) */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.basis {
+    background-color: DarkGrey;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items:    center;
+    justify-content: space-between;
+    box-sizing: border-box; =
+}
+
+.basis h1 {
+    color: black;
+    text-align: center;
+    flex-grow: 2;
+    font-family: 'Impact', fantasy;
+    margin: 0 30px;
+    font-size: 4em;
+}
+
+.links {
+    background-color: LightGray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Impact', fantasy;
+}
+
+.left-imager,
+.right-imager{
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.left-image,
+.right-image {
+    height: 100px;
+    width: auto;
+}

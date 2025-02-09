@@ -1,0 +1,30 @@
+{% extends "kxl/basis.html" %}
+{% load static %}
+
+{% block title %}
+    Создание матча
+{% endblock %}
+
+{% block content %}
+<div style="background-image: url('{% static "fon_matches.jpg" %}'); background-size: cover; background-position: center; min-height: 100vh; padding: 20px;">
+    <div style="background-color: #add8e6; border-radius: 15px; padding: 20px; width: 600px; margin: auto; display: flex;">
+        <div style="flex: 1;">
+            <h2>Создание матча</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Создать</button>
+            </form>
+        </div>
+        <div style="flex: 1; border-left: 2px solid #000; padding-left: 20px;">
+            <h3>Правила заполнения формы:</h3>
+            <ul>
+                <li>Дата и время должны быть в формате: ГГГГ-ММ-ДД:ЧЧ:ММ:СС</li>
+                <li>Первый и второй клуб не могут быть одинаковыми</li>
+                <li>Клубы не могут быть задействованы в других матчах в то же время</li>
+                <li>Арбитр не может быть задействован в другом матче в то же время</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

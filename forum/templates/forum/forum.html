@@ -1,0 +1,38 @@
+{% extends "kxl/basis.html" %}
+{% load static %}
+
+{% block title %}
+    Форум
+{% endblock %}
+
+{% block content %}
+<div style="background-image: url('{% static "fon_forum.jpg" %}'); background-size: cover; min-height: 100vh; padding: 20px;">
+    <h1 align="center" style="color: white;">Форум Континентальной хоккейной лиги</h1>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="width: 70%; border-right: 2px solid white; padding-right: 20px;">
+            <h2 style="color: white;">Комментарии</h2>
+            {% for comment in comments %}
+                <div style="background-color: rgba(255, 255, 255, 0.8); padding: 10px; margin-bottom: 10px;">
+                    <p><strong>{{comment.user.first_name}}{{comment.user.last_name}}</strong>:</p>
+                    <p>{{ comment.comment }}</p>
+                    <p style="font-size: small;">{{ comment.created_at }}</p>
+                    {% if user.is_superuser %}
+                        <form method="post" action="{% url 'delete_comment' comment.id %}">
+                            {% csrf_token %}
+                            <button type="submit">Удалить</button>
+                        </form>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div style="width: 30%; padding-left: 20px;">
+            <h2 style="color: white;">Оставить комментарий</h2>
+            <form method="post" action="{% url 'add_comment' %}">
+                {% csrf_token %}
+                <textarea name="comment" rows="4" cols="50" placeholder="Ваш комментарий" required></textarea><br>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

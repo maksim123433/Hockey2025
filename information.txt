@@ -1,0 +1,97 @@
+superuser
+    username and email:   alekseevm715@gmail.com
+    password: miki715max
+
+Owners
+  1.
+    Email:KXLownerLOCO1@gmail.com
+    Пароль: Kxl12345
+    First name:Юрий
+    Last name: Яковлев
+
+  2.
+    Email:KXLownerTRACTOR1@gmail.com
+    Пароль: Kxl1431211
+    First name: Иван
+    Last name: Савин
+
+  3.
+    Email:KXLownerAKBARS1@gmail.com
+    Пароль: Kxl12440
+    First name:Иван
+    Last name: Левиной
+  4.
+    Email:KXLownerSALAVAT1@gmail.com
+    Пароль: jkkkrv23kn1
+    First name:Буринов
+    Last name: Иван
+  5.
+    Email:KXLownerDINAMOMM1@gmail.com
+    Пароль: best228cwq
+    First name:Владис
+    Last name:Максим
+
+
+Тренера:
+  Динамо (Минск):
+Главный тренер: Дмитрий Квартальнов
+Email: d.kvartalnov@example.com
+Пароль: StrongPassword123!
+
+    Локомотив (Ярославль):
+Главный тренер: Павел Мантышев
+Email: p.mantyshev@example.com
+Пароль: SecurePass456@
+
+    Спартак (Москва):
+Главный тренер: Александр Ярушкин
+Email: a.yarushkin@example.com
+Пароль: SafePassword789#     -------!!!
+
+    Салават Юлаев (Уфа):
+Главный тренер: Виктор Козлов
+Email: v.kozlov@example.com
+Пароль: UfaSalavat2024$
+
+    Авангард (Омск):
+Главный тренер: Андрей Скабелка
+Email: a.skabelka@example.com
+Пароль: MightyPass101%             --------!
+
+    Сибирь (Новосибирск):
+Главный тренер: Дмитрий Сайфуллин
+Email: d.saifullin@example.com
+Пароль: Siberia2024!                -------!
+
+    Ак Барс (Казань):
+Главный тренер: Анвар Рафаилович
+Email: d.anvar123@example.com
+Пароль: AkBars2024@
+
+    Трактор (Челябинск):
+Главный тренер: Гру Бенуа
+Email: a.tulin@example.com
+Пароль: Traktor2024#
+
+
+Арбитеры
+    Email: arbirter1@example.com
+    Пароль: ardm2024#
+
+    Email: arbirter2@example.com
+    Пароль: ardm2024#
+
+    Email: arbirter3@example.com
+    Пароль: ardфывфm2024#
+
+
+Обычный:
+    Email: 12e1qdadda@example.com
+    Пароль: a13daddac#
+
+
+    Email: 23acda@example.com
+    Пароль: a13daddac#
+
+
+Тип даты :2027-09-11:11:11

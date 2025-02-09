@@ -1,0 +1,19 @@
+{% extends "kxl/basis.html" %}
+{% load static %}
+
+{% block title %}
+    Создание клуба
+{% endblock %}
+
+{% block content %}
+<div style="background-image: url('{% static "create/fon.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 75vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-left: 10%; padding-top: 10px;">
+    <h2 style="font-size: 2.5em; text-align: center; margin-top: 5px; color: white;">Создание клуба</h2>
+    <div style="width: 25.5%; background-color: rgba(211, 211, 211, 0.8); padding: 17px; border-radius: 10px; margin-top: 0px;">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" style="margin-top: 10px; padding: 10px 15px; background-color: grey; color: white; border: none; border-radius: 5px; cursor: pointer;">Создать</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

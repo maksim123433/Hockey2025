@@ -1,0 +1,23 @@
+{% extends "kxl/basis.html" %}
+{% load static %}
+
+{% block title %}
+    Мои билеты
+{% endblock %}
+
+{% block content %}
+    <div style="background-image: url('{% static "tickets/fon_tickets.jpg" %}'); background-size: cover; background-position: center; min-height: 100vh; padding: 20px; position: relative;">
+    <div>
+        <h1 style="color: white;">Мои билеты</h1>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
+        {% for ticket in tickets %}
+        <div style="background-color: #87CEFA; border-radius: 15px; padding: 40px; width: 600px;">
+            <h2>Матч: {{ ticket.First_club }} против {{ ticket.Second_club }}</h2>
+            <p>Дата и время: {{ ticket.Date }}</p>
+            <p>Место проведения: {{ ticket.City }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

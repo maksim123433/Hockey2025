@@ -1,0 +1,30 @@
+{% extends "kxl/basis.html" %}
+{% load static %}
+
+{% block title %}
+  Создание клуба
+{% endblock %}
+
+{% block content %}
+<div style="background-image: url('{% static "clubs/fon_info.jpg" %}'); background-size: cover; background-position: center; min-height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div style="background-color: #d3d3d3; border-radius: 15px; padding: 40px; width: 600px;">
+        <h2 style="font-size: 2em;">Информация о клубе</h2>
+        <p>Название клуба: {{ club.Name }}</p>
+        <p>Дата основания: {{ club.Foundation_date }}</p>
+        <p>Главный тренер: {{ club.Head_coach }}</p>
+        <p>Владелец: {{ club.Owner }}</p>
+        <p>Конференция:
+            {% if club.Conference == 'e' %}
+                Восточная
+            {% elif club.Conference == 'w' %}
+                Западная
+            {% endif %}
+        </p>
+        <p>Общая стоимость: {{ club.Total_cost_of_club }}</p>
+        <p>Количество игроков: {{ club.Number_of_players }}</p>
+        {% if user == club.Owner %}
+        <a href="{% url 'update_club' club.id %}" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: orange; color: white; text-decoration: none; border-radius: 5px;">Изменить</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

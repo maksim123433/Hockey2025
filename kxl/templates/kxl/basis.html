@@ -1,0 +1,45 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'kxl/base.css' %}">
+</head>
+<body>
+    <div class="basis">
+        <!-- Картинки по бокам -->
+        <div class="left-imager">
+            <img src="{% static 'kxl/Hockey-player.png' %}" class="left-image">
+        </div>
+        <h1 align="center">Континентальная хоккейная лига</h1>
+        <div class="right-imager">
+            <img src="{% static 'kxl/kxl.png' %}" class="right-image">
+        </div>
+    </div>
+
+    <nav class="links">
+        {% if user.is_authenticated %}
+            <!-- все элементы автоматически по центру -->
+            <a href="{% url 'main' %}" style="margin: 0 auto;">Главная</a>
+            <a href="{% url 'clubs' %}" style="margin: 0 auto;">Клубы</a>
+            <a href="{% url 'matches' %}" style="margin: 0 auto;">Матчи</a>
+            <a href="{% url 'forum' %}" style="margin: 0 auto;">Форум</a>
+            <form method="post" action="{% url 'logout' %}" style="margin: 0 auto;">
+                {% csrf_token %}
+                <span><a href="{% url 'myprofile' %}" style="font-size: 0.8em; ">Профиль</a>|</span>
+                <button type="submit">Выход</button>
+            </form>
+        {% else %}
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                <a href="{% url 'authoriz' %}">Регистрация</a>
+                <a href="{% url 'login' %}">Вход</a>
+            </div>
+        {% endif %}
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
