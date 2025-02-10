@@ -1,7 +1,10 @@
 from rest_framework import serializers
+
+
 from clubs.models import Clubs
 from matches.models import Matches
 from authorization.models import ProUser
+
 
 class ClubSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,7 +26,6 @@ class ClubSerializer(serializers.ModelSerializer):
         return instance
 
 
-
 class ProuserSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProUser
@@ -40,7 +42,6 @@ class ProuserSerializer(serializers.ModelSerializer):
         return instance
 
 
-
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matches
@@ -50,10 +51,11 @@ class MatchSerializer(serializers.ModelSerializer):
         return Matches.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        instance.home_team = validated_data.get('home_team', instance.home_team)
-        instance.away_team = validated_data.get('away_team', instance.away_team)
-        instance.match_date = validated_data.get('match_date', instance.match_date)
-        instance.venue = validated_data.get('venue', instance.venue)
+        instance.First_club = validated_data.get('First_club', instance.First_club)
+        instance.Second_club = validated_data.get('Second_club', instance.Second_club)
+        instance.Date = validated_data.get('Date', instance.Date)
+        instance.Arbiter = validated_data.get('Arbiter', instance.Arbiter)
+        instance.City = validated_data.get('City', instance.City)
         instance.save()
         return instance
 

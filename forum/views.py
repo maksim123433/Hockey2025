@@ -1,14 +1,10 @@
-
-
-from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, DeleteView
-from django.shortcuts import get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
-from .models import Comment
-from .forms import CommentForm
+
+from forum.models import Comment
+from forum.forms import CommentForm
 
 class ForumViews(ListView):
     model = Comment

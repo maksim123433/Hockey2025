@@ -38,7 +38,6 @@ class UpdateClubView(UpdateView):
     success_url = reverse_lazy("clubs")
     pk_url_kwarg = 'pk'
 
-
 class ClubInfoView(DetailView):
     model = Clubs
     template_name = "clubs/club_info.html"

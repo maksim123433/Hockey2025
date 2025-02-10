@@ -13,9 +13,7 @@ class ProUser(AbstractUser):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField(null=True)
-    role = models.CharField(
-        max_length=1, choices=Role.choices, default=Role.USER, null=True
-    )
+    role = models.CharField(max_length=1, choices=Role.choices, default=Role.USER, null=True)
     tickets = models.TextField(null=True, blank=True)
 
     def __str__(self):

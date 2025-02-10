@@ -1,16 +1,9 @@
-from debug_toolbar.panels.alerts import FormParser
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
-from django.contrib.auth.views import LogoutView
-from django.views.generic import TemplateView, FormView
 from django.views.generic.edit import CreateView
-from django.shortcuts import redirect
-from django.contrib.auth import login
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+
+
 from authorization.forms import LoginForm
-from authorization.models import ProUser
 from authorization.forms import RegisterUserForm
 
 

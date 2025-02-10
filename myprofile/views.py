@@ -1,5 +1,6 @@
+from django.views.generic import ListView
 
-from django.views.generic import TemplateView, ListView
+
 from authorization.models import ProUser
 
 class MyProfileView(ListView):

@@ -1,4 +1,5 @@
 from django.db import models
+
 from authorization.models import ProUser
 
 class Comment(models.Model):

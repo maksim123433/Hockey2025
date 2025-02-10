@@ -1,14 +1,14 @@
-from django.contrib.sessions.backends.base import UpdateError
-from django.views.generic import TemplateView, FormView, ListView, UpdateView
+from django.views.generic import ListView, UpdateView
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
+from django.views.generic.edit import FormView
+from django.shortcuts import get_object_or_404, redirect
+
+
 from authorization.models import ProUser
 from clubs.models import Clubs
 from matches.models import Matches
-from forum.models import Comment
 from .forms import CreateMatch
-from django.views.generic.edit import FormView
-from django.shortcuts import get_object_or_404, redirect
 
 
 class MatchesView(ListView):
@@ -41,7 +41,6 @@ class UpdateMatchesView(UpdateView):
 
 
 class BuyTicketsView(CreateView):
-
     def post(self, request, *args, **kwargs):
         match_id = kwargs['match_id']
         user = request.user

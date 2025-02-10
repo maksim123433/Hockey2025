@@ -1,5 +1,6 @@
 from django.views.generic import TemplateView
-from authorization.models import ProUser
+
+
 from clubs.models import Clubs
 from matches.models import Matches
 from forum.models import Comment

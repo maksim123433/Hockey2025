@@ -1,10 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
-from matches.models import Matches
-from authorization.models import ProUser
 from django.views.generic import ListView
+
+
 from matches.models import Matches
-from authorization.models import ProUser
 
 class MyTicketsView(ListView):
     model = Matches
